@@ -17,10 +17,14 @@ Proyecto de automatización de pruebas funcionales usando Serenity BDD con el pa
 
 src/test/java/com/proyecto/
 ├── features/          → Runner de Cucumber
+
 ├── stepdefinitions/   → Definición de pasos
+
 └── screenplay/
     ├── tasks/         → Tareas del actor
+    
     ├── questions/     → Preguntas del actor
+    
     └── pages/         → Page Objects
 
 src/test/resources/
