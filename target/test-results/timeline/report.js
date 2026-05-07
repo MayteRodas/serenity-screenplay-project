@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"4e51c4d2-d26f-4304-916b-20c7e388b4a5","feature":"Autenticacion de usuarios","scenario":"Inicio de sesion fallido con credenciales invalidas","start":1778170775322,"group":1,"content":"","tags":"","end":1778170779167,"className":"passed"},{"id":"fe90563b-3169-49b1-b357-c000e1a27b0d","feature":"Autenticacion de usuarios","scenario":"Inicio de sesion exitoso con credenciales validas","start":1778170766118,"group":1,"content":"","tags":"","end":1778170775031,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[Test worker,5,main]"}]);
+});
