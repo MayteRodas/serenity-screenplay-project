@@ -1,13 +1,30 @@
-plugins { id 'java' }
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.1.14"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
+
 group = 'com.proyecto'
 version = '1.0-SNAPSHOT'
-java { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
-repositories { mavenCentral() }
-ext {
-    serenityVersion = '4.1.20'
-    cucumberVersion = '7.15.0'
-    junitVersion = '5.10.1'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
     testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
@@ -20,6 +37,11 @@ dependencies {
     testImplementation "org.assertj:assertj-core:${assertjVersion}"
     testImplementation "org.slf4j:slf4j-simple:${slf4jVersion}"
 }
+
+serenity {
+    outputDirectory = "target/site/serenity"
+}
+
 test {
     useJUnit()
     testLogging {
@@ -27,15 +49,7 @@ test {
         showStandardStreams = true
     }
 }
-//gradle.startParameter.continueOnFailure = true
-
-task aggregate(type: JavaExec) {
-    group = 'Serenity'
-    dependsOn compileTestJava
-    classpath = configurations.testRuntimeClasspath + sourceSets.test.output
-    mainClass = 'com.proyecto.GenerateReport'
-    args = ["${buildDir}/site/serenity"]
-    ignoreExitValue = true
-}
 
 test.finalizedBy aggregate
+
+gradle.startParameter.continueOnFailure = true
