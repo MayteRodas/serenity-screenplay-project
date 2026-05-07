@@ -15,21 +15,16 @@ Proyecto de automatización de pruebas funcionales usando Serenity BDD con el pa
 
 ## Estructura del proyecto
 
-src/test/java/com/proyecto/
-├── features/          → Runner de Cucumber
+### Código fuente
+- `src/test/java/com/proyecto/features` → Runner de Cucumber
+- `src/test/java/com/proyecto/stepdefinitions` → Definición de pasos
+- `src/test/java/com/proyecto/screenplay/tasks` → Tareas del actor
+- `src/test/java/com/proyecto/screenplay/questions` → Preguntas del actor
+- `src/test/java/com/proyecto/screenplay/pages` → Page Objects
 
-├── stepdefinitions/   → Definición de pasos
-
-└── screenplay/
-    ├── tasks/         → Tareas del actor
-    
-    ├── questions/     → Preguntas del actor
-    
-    └── pages/         → Page Objects
-
-src/test/resources/
-├── features/          → Escenarios Cucumber (.feature)
-└── serenity.conf      → Configuración de Serenity
+### Recursos
+- `src/test/resources/features` → Escenarios Cucumber (.feature)
+- `src/test/resources/serenity.conf` → Configuración de Serenity
 
 
 ## Requisitos previos
