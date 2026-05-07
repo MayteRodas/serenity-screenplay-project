@@ -4,17 +4,19 @@ import com.proyecto.screenplay.pages.LoginPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.Tasks;
+import net.thucydides.model.environment.SystemEnvironmentVariables;
+import net.thucydides.model.util.EnvironmentVariables;
 
 public class NavegaALoginPage implements Task {
 
-    public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Open.url(LoginPage.URL)
-        );
+    public static NavegaALoginPage enElSistema() {
+        return new NavegaALoginPage();
     }
 
-    public static NavegaALoginPage enElSistema() {
-        return Tasks.instrumented(NavegaALoginPage.class);
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        EnvironmentVariables variables = SystemEnvironmentVariables.createEnvironmentVariables();
+        String url = variables.getProperty("app.url", "https://the-internet.herokuapp.com/login");
+        actor.attemptsTo(Open.url(url));
     }
 }
