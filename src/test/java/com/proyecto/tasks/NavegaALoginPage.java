@@ -1,6 +1,5 @@
-package com.proyecto.screenplay.tasks;
+package com.proyecto.tasks;
 
-import com.proyecto.screenplay.pages.LoginPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;

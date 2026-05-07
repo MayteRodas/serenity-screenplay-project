@@ -1,4 +1,4 @@
-package com.proyecto.screenplay.pages;
+package com.proyecto.pages;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;

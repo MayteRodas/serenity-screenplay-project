@@ -1,8 +1,8 @@
 package com.proyecto.stepdefinitions;
 
-import com.proyecto.screenplay.questions.MensajeEnPantalla;
-import com.proyecto.screenplay.tasks.IniciarSesion;
-import com.proyecto.screenplay.tasks.NavegaALoginPage;
+import com.proyecto.questions.MensajeEnPantalla;
+import com.proyecto.tasks.IniciarSesion;
+import com.proyecto.tasks.NavegaALoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;

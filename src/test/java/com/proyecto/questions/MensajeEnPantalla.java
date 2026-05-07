@@ -1,11 +1,9 @@
-package com.proyecto.screenplay.questions;
+package com.proyecto.questions;
 
-import com.proyecto.screenplay.pages.LoginPage;
+import com.proyecto.pages.LoginPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.questions.Text;
 
 public class MensajeEnPantalla implements Question<String> {
