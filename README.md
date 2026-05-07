@@ -19,9 +19,10 @@ src/test/java/com/proyecto/
 ├── features/          → Runner de Cucumber
 ├── stepdefinitions/   → Definición de pasos
 └── screenplay/
-├── tasks/         → Tareas del actor
-├── questions/     → Preguntas del actor
-└── pages/         → Page Objects
+    ├── tasks/         → Tareas del actor
+    ├── questions/     → Preguntas del actor
+    └── pages/         → Page Objects
+
 src/test/resources/
 ├── features/          → Escenarios Cucumber (.feature)
 └── serenity.conf      → Configuración de Serenity
