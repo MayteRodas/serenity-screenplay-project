@@ -11,5 +11,5 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         tags = ""
 )
-public class CucumberTestRunner {
+public class CucumberTest {
 }
